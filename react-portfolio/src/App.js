@@ -45,9 +45,7 @@ function App() {
         <Route>
           <NotFound />
         </Route>
-        <Route path="/posts">
-          <Posts />
-        </Route>
+        <Route path="/posts" component={Posts} />
       </Switch>
     </BrowserRouter>
   );
@@ -69,7 +67,8 @@ function NotFound() {
   return <h2>Not Found Page</h2>;
 }
 
-function Posts() {
+function Posts(props) {
+  console.log(props);
   return <h2>Post List</h2>;
 };
 
