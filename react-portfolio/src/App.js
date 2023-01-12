@@ -4,8 +4,12 @@ function App() {
   return (
 <BrowserRouter>
       <h1>Hello React Router</h1>
-      <Route path="/">
-        <Home />
+       <Route path="/" component={Home} />
+       <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/contact">
+        <Contact />
       </Route>
     </BrowserRouter>
   );
