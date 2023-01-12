@@ -4,14 +4,14 @@ function App() {
     <BrowserRouter>
       <h1>Hello React Router</h1>
       <ul>
-          <li>
+      <li>
         <NavLink
-          activeStyle={{
-            fontWeight: 'bold',
-            color: 'red',
-          }}
-          exact
-          to="/"
+            activeStyle={{
+              fontWeight: 'bold',
+              color: 'red',
+            }}
+            exact
+            to="/"
         >
           Home
         </NavLink>
