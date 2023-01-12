@@ -1,22 +1,23 @@
-import { BrowserRouter, Route } from 'react-router-dom';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 function App() {
   return (
-  <BrowserRouter>
+    <BrowserRouter>
       <h1>Hello React Router</h1>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/contact">
-        <Contact />
-      </Route>
-      <Route>
-        <NotFound />
-      </Route>
-  </BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
