@@ -1,17 +1,30 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
       <h1>Hello React Router</h1>
       <ul>
+          <li>
+        <NavLink
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+          exact
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
         <li>
-          <a href="/">Home</a>
+          <NavLink activeClassName="active" to="/about">
+            About
+          </NavLink>
         </li>
         <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
+          <NavLink activeClassName="active" to="/contact">
+            Contact
+          </NavLink>
         </li>
       </ul>
       <Switch>
