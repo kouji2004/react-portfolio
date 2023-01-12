@@ -2,16 +2,21 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-<BrowserRouter>
+  <BrowserRouter>
       <h1>Hello React Router</h1>
-       <Route path="/" component={Home} />
-       <Route path="/about">
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/about">
         <About />
       </Route>
       <Route path="/contact">
         <Contact />
       </Route>
-    </BrowserRouter>
+      <Route>
+        <NotFound />
+      </Route>
+  </BrowserRouter>
   );
 }
 
@@ -25,6 +30,10 @@ function About() {
 
 function Contact() {
   return <h2>Contact</h2>;
+}
+
+function NotFound() {
+  return <h2>Not Found Page</h2>;
 }
 
 export default App;
