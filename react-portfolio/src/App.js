@@ -3,6 +3,17 @@ function App() {
   return (
     <BrowserRouter>
       <h1>Hello React Router</h1>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
       <Switch>
         <Route exact path="/">
           <Home />
