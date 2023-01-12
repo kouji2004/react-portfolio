@@ -26,6 +26,11 @@ function App() {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink activeClassName="active" to="/posts">
+            Posts
+          </NavLink>
+        </li>
       </ul>
       <Switch>
         <Route exact path="/">
@@ -39,6 +44,9 @@ function App() {
         </Route>
         <Route>
           <NotFound />
+        </Route>
+        <Route path="/posts">
+          <Posts />
         </Route>
       </Switch>
     </BrowserRouter>
@@ -60,5 +68,9 @@ function Contact() {
 function NotFound() {
   return <h2>Not Found Page</h2>;
 }
+
+function Posts() {
+  return <h2>Post List</h2>;
+};
 
 export default App;
